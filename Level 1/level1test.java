@@ -5,7 +5,7 @@ import java.util.List;
 
 public class level1test {
     public static void main(String[] args) {
-        String startUrl = "https://www.hunter.cuny.edu/";
+        String startUrl = "https://www.hunter.cuny.edu";
 
         PageFetcher fetcher = new PageFetcher();
         LinkExtractor extractor = new LinkExtractor();
