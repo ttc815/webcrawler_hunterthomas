@@ -1,0 +1,452 @@
+digraph Hunter_Web_Crawler {
+    node [shape=box, style=filled];
+    node0 [label="/"];
+
+    node0 -> node1;
+    node0 -> node2;
+    node0 -> node3;
+    node0 -> node4;
+    node0 -> node5;
+    node0 -> node6;
+    node0 -> node7;
+    node0 -> node8;
+    node1 [label="/students/"];
+
+    node1 -> node9;
+    node1 -> node10;
+    node1 -> node11;
+    node1 -> node12;
+    node1 -> node13;
+    node1 -> node14;
+    node1 -> node15;
+    node1 -> node16;
+    node2 [label="/alumni/"];
+
+    node3 [label="/faculty/"];
+
+    node4 [label="/staff/"];
+
+    node5 [label="/community/"];
+
+    node6 [label="/quick-links/"];
+
+    node7 [label="/directory/"];
+
+    node8 [label="/students/admissions/"];
+
+    node9 [label="/give/"];
+
+    node10 [label="/central-reservations-and-events/"];
+
+    node10 -> node17;
+    node10 -> node18;
+    node10 -> node19;
+    node10 -> node20;
+    node10 -> node21;
+    node10 -> node22;
+    node10 -> node23;
+    node10 -> node24;
+    node11 [label="/about/"];
+
+    node12 [label="/about/mission/"];
+
+    node13 [label="/about/strategic-plan/"];
+
+    node14 [label="/about/accreditation/"];
+
+    node15 [label="/about/facts-and-statistics/"];
+
+    node16 [label="/office-of-the-president/"];
+
+    node17 [label="/capital-projects/"];
+
+    node17 -> node25;
+    node17 -> node26;
+    node17 -> node27;
+    node17 -> node28;
+    node17 -> node29;
+    node17 -> node30;
+    node17 -> node31;
+    node17 -> node32;
+    node18 [label="/environment/hunter-green/"];
+
+    node18 -> node97;
+    node18 -> node98;
+    node18 -> node99;
+    node18 -> node100;
+    node18 -> node101;
+    node18 -> node102;
+    node18 -> node103;
+    node18 -> node104;
+    node19 [label="/about/campus-information/"];
+
+    node19 -> node145;
+    node19 -> node146;
+    node19 -> node147;
+    node19 -> node148;
+    node19 -> node149;
+    node20 [label="/about/contact/"];
+
+    node21 [label="/academics/"];
+
+    node22 [label="/office-of-the-provost/"];
+
+    node23 [label="/academics/schools/"];
+
+    node24 [label="/academics/departments-and-programs/"];
+
+    node25 [label="/academics/majors-degree-tracks/"];
+
+    node25 -> node33;
+    node25 -> node34;
+    node25 -> node35;
+    node25 -> node36;
+    node25 -> node37;
+    node25 -> node38;
+    node25 -> node39;
+    node25 -> node40;
+    node26 [label="/honors-scholars-programs/"];
+
+    node26 -> node41;
+    node26 -> node42;
+    node26 -> node43;
+    node26 -> node44;
+    node26 -> node45;
+    node26 -> node46;
+    node26 -> node47;
+    node26 -> node48;
+    node27 [label="/students/opportunities/study-abroad/"];
+
+    node27 -> node49;
+    node27 -> node50;
+    node27 -> node51;
+    node27 -> node52;
+    node27 -> node53;
+    node27 -> node54;
+    node27 -> node55;
+    node27 -> node56;
+    node28 [label="/students/academic-planning/office-of-advising/"];
+
+    node28 -> node57;
+    node28 -> node58;
+    node28 -> node59;
+    node28 -> node60;
+    node28 -> node61;
+    node28 -> node62;
+    node28 -> node63;
+    node28 -> node64;
+    node29 [label="/office-of-the-provost/research-and-scholarship/"];
+
+    node29 -> node65;
+    node29 -> node66;
+    node29 -> node67;
+    node29 -> node68;
+    node29 -> node69;
+    node29 -> node70;
+    node29 -> node71;
+    node29 -> node72;
+    node30 [label="/students/admissions/undergraduate/"];
+
+    node30 -> node73;
+    node30 -> node74;
+    node30 -> node75;
+    node30 -> node76;
+    node30 -> node77;
+    node30 -> node78;
+    node30 -> node79;
+    node30 -> node80;
+    node31 [label="/students/admissions/graduate-admissions/"];
+
+    node31 -> node81;
+    node31 -> node82;
+    node31 -> node83;
+    node31 -> node84;
+    node31 -> node85;
+    node31 -> node86;
+    node31 -> node87;
+    node31 -> node88;
+    node32 [label="/students/campus-life/student-clubs/"];
+
+    node32 -> node89;
+    node32 -> node90;
+    node32 -> node91;
+    node32 -> node92;
+    node32 -> node93;
+    node32 -> node94;
+    node32 -> node95;
+    node32 -> node96;
+    node97 [label="/environment/"];
+
+    node97 -> node105;
+    node97 -> node106;
+    node97 -> node107;
+    node97 -> node108;
+    node97 -> node109;
+    node97 -> node110;
+    node97 -> node111;
+    node97 -> node112;
+    node98 [label="/environment/hunter-green/about/"];
+
+    node98 -> node113;
+    node98 -> node114;
+    node98 -> node115;
+    node98 -> node116;
+    node98 -> node117;
+    node98 -> node118;
+    node98 -> node119;
+    node98 -> node120;
+    node99 [label="/environment/hunter-green/about/awards-and-recognitions/"];
+
+    node99 -> node121;
+    node99 -> node122;
+    node99 -> node123;
+    node99 -> node124;
+    node99 -> node125;
+    node99 -> node126;
+    node99 -> node127;
+    node99 -> node128;
+    node100 [label="/environment/hunter-green/about/partners/"];
+
+    node100 -> node129;
+    node100 -> node130;
+    node100 -> node131;
+    node100 -> node132;
+    node100 -> node133;
+    node100 -> node134;
+    node100 -> node135;
+    node100 -> node136;
+    node101 [label="/environment/hunter-green/about/sustainability-council/"];
+
+    node101 -> node137;
+    node101 -> node138;
+    node101 -> node139;
+    node101 -> node140;
+    node101 -> node141;
+    node101 -> node142;
+    node101 -> node143;
+    node102 [label="/environment/hunter-green/about/team/"];
+
+    node102 -> node144;
+    node103 [label="/environment/hunter-green/about/timeline/"];
+
+    node104 [label="/environment/hunter-green/initiatives/"];
+
+    node145 [label="/public-safety/emergency-closing-information/"];
+
+    node146 [label="/about/campus-information/68th-street-campus/"];
+
+    node147 [label="/about/campus-information/brookdale-campus/"];
+
+    node148 [label="/about/campus-information/east-harlem-campus/"];
+
+    node149 [label="/about/campus-information/79th-street-residence/"];
+
+    node33 [label="/students/campus-life/residence-life/"];
+
+    node34 [label="/students/campus-life/student-living-guide/"];
+
+    node35 [label="/students/campus-life/"];
+
+    node36 [label="/events/"];
+
+    node37 [label="/news"];
+
+    node38 [label="/artsci/"];
+
+    node39 [label="/school-of-health-professions/"];
+
+    node40 [label="/hunter-bellevue-school-of-nursing/"];
+
+    node41 [label="/mcnair/"];
+
+    node42 [label="/mcnulty/"];
+
+    node43 [label="/mellon"];
+
+    node44 [label="/athena-honors-program/"];
+
+    node45 [label="/daedalus-scholars-program/"];
+
+    node46 [label="/students/hunter-scholars-program/prospective-applicants/nursing-scholars-program/"];
+
+    node47 [label="/roosevelt-scholar-program/"];
+
+    node48 [label="/yalow-scholars-program/"];
+
+    node49 [label="/students/opportunities/"];
+
+    node50 [label="/students/opportunities/study-abroad/eligibility-requirements/"];
+
+    node51 [label="/students/opportunities/study-abroad/study-abroad-planning-timeline/"];
+
+    node52 [label="/students/opportunities/study-abroad/advising/"];
+
+    node53 [label="/students/opportunities/study-abroad/scholarships-and-finances/"];
+
+    node54 [label="/students/opportunities/study-abroad/scholarships-and-finances/scholarships-awards-and-grants/"];
+
+    node55 [label="/students/opportunities/study-abroad/scholarships-and-finances/expenses-and-payments/"];
+
+    node56 [label="/students/opportunities/study-abroad/scholarships-and-finances/payments-to-education-abroad/"];
+
+    node57 [label="/students/academic-planning/"];
+
+    node58 [label="/students/academic-planning/office-of-advising/meet-our-team/"];
+
+    node59 [label="/students/academic-planning/office-of-advising/student-resources/"];
+
+    node60 [label="/students/academic-planning/office-of-advising/events/"];
+
+    node61 [label="/students/academic-planning/office-of-advising/first-year-advising-network/"];
+
+    node62 [label="/students/academic-planning/office-of-advising/new-transfer-students/"];
+
+    node63 [label="/students/academic-planning/office-of-advising/new-transfer-students/get-ahead-explore-your-transfer-credits/"];
+
+    node64 [label="/students/academic-planning/office-of-advising/new-transfer-students/transfer-to-cuny-with-ease/"];
+
+    node65 [label="/office-of-the-provost/about/"];
+
+    node66 [label="/office-of-the-provost/academic-units/"];
+
+    node67 [label="/office-of-the-provost/faculty-affairs/"];
+
+    node68 [label="/office-of-the-provost/faculty-affairs/resources/"];
+
+    node69 [label="/office-of-the-provost/faculty-affairs/funding-opportunities/"];
+
+    node70 [label="/office-of-the-provost/student-success/"];
+
+    node71 [label="/office-of-the-provost/policies-procedures-forms/"];
+
+    node72 [label="/office-of-the-provost/events/"];
+
+    node73 [label="/students/admissions/undergraduate/scholarships-and-honors-programs/"];
+
+    node74 [label="/students/admissions/undergraduate/tuition-and-aid/"];
+
+    node75 [label="/students/admissions/undergraduate/apply/freshman/"];
+
+    node76 [label="/students/admissions/undergraduate/apply/transfer/"];
+
+    node77 [label="/students/admissions/undergraduate/apply/non-degree/"];
+
+    node78 [label="/students/admissions/undergraduate/apply/readmission/"];
+
+    node79 [label="/students/admissions/undergraduate/apply/international/"];
+
+    node80 [label="/students/admissions/undergraduate/apply/senior-citizen-auditors/"];
+
+    node81 [label="/students/admissions/graduate-admissions/academic-programs/"];
+
+    node82 [label="/students/admissions/graduate-admissions/apply/"];
+
+    node83 [label="/students/admissions/graduate-admissions/school-of-arts-and-sciences/"];
+
+    node84 [label="/students/admissions/graduate-admissions/silberman-school-of-social-work/"];
+
+    node85 [label="/students/admissions/graduate-admissions/school-of-health-professions/"];
+
+    node86 [label="/students/admissions/graduate-admissions/school-of-nursing/"];
+
+    node87 [label="/students/tuition-and-payment/tuition-and-fees/"];
+
+    node88 [label="/students/admissions/graduate-admissions/application-deadlines/"];
+
+    node89 [label="/students/campus-life/publications-and-media/"];
+
+    node90 [label="/students/campus-life/student-clubs/starting-a-club/"];
+
+    node91 [label="/students/campus-life/student-clubs/club-registration/"];
+
+    node92 [label="/students/campus-life/student-clubs/fundraising/"];
+
+    node93 [label="/students/campus-life/student-clubs/club-status/"];
+
+    node94 [label="/students/campus-life/student-clubs/request-budget/"];
+
+    node95 [label="/students/campus-life/student-clubs/promote/"];
+
+    node96 [label="/students/campus-life/student-clubs/plan-event/"];
+
+    node105 [label="/environment/environmental-health-safety/"];
+
+    node106 [label="/news/"];
+
+    node107 [label="/bookstore/"];
+
+    node108 [label="/office-of-human-resources/employment/"];
+
+    node109 [label="/career-success/"];
+
+    node110 [label="/public-safety/"];
+
+    node111 [label="/students/student-affairs/office-of-student-conduct/campus-hazing-transparency-report/"];
+
+    node112 [label="/students/consumer-information/"];
+
+    node113 [label="/environment/hunter-green/initiatives/sustainable-education-and-outreach/"];
+
+    node114 [label="/environment/hunter-green/initiatives/energy/"];
+
+    node115 [label="/environment/hunter-green/initiatives/sustainable-nutrition/"];
+
+    node116 [label="/environment/hunter-green/initiatives/procurement/"];
+
+    node117 [label="/environment/hunter-green/initiatives/transportation/"];
+
+    node118 [label="/environment/hunter-green/initiatives/waste-and-recycling/"];
+
+    node119 [label="/environment/hunter-green/initiatives/water/"];
+
+    node120 [label="/green-map"];
+
+    node121 [label="/environment/hunter-green/get-involved/"];
+
+    node122 [label="/environment/hunter-green/get-involved/climate-assembly-project-on-waste-at-hunter/"];
+
+    node123 [label="/environment/hunter-green/get-involved/green-labs/"];
+
+    node124 [label="/environment/hunter-green/get-involved/join-an-organization/"];
+
+    node125 [label="/environment/hunter-green/get-involved/take-courses/"];
+
+    node126 [label="/environment/hunter-green/get-involved/start-a-project/"];
+
+    node127 [label="/environment/hunter-green/get-involved/green-office-certification/"];
+
+    node128 [label="/environment/hunter-green/resources-and-regulations/"];
+
+    node129 [label="/environment/hunter-green/resources-and-regulations/dashboard/"];
+
+    node130 [label="/environment/hunter-green/resources-and-regulations/reports/"];
+
+    node131 [label="/environment/hunter-green/resources-and-regulations/green-discounts/"];
+
+    node132 [label="/environment/hunter-green/resources-and-regulations/hunter-college-aashe/"];
+
+    node133 [label="/environment/hunter-green/resources-and-regulations/tips/"];
+
+    node134 [label="/environment/hunter-green/resources-and-regulations/green-purchasing-rules/"];
+
+    node135 [label="/environment/hunter-green/hunter-green-summit/"];
+
+    node136 [label="/environment/hunter-green/hunter-green-summit/2026-summit/"];
+
+    node137 [label="/environment/hunter-green/hunter-green-summit/2025-summit/"];
+
+    node138 [label="/environment/hunter-green/contact/"];
+
+    node139 [label="/environment/hunter-green/about/sustainability-council/profile/kelli-stephens/"];
+
+    node140 [label="/tobacco-free-hunter/"];
+
+    node141 [label="/focus-on-campus/"];
+
+    node142 [label="/accessibility/"];
+
+    node143 [label="/privacy-policy/"];
+
+    node144 [label="/environment/hunter-green/about/team/profile/kelli-stephens/"];
+
+}
