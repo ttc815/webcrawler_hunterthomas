@@ -26,10 +26,24 @@ public class Tree {
     }
 
     public void printTree() {
-        System.out.println("Root: " + root.url);
+    printTree(root, 0);
+}
 
-        for (TreeNode child : root.children) {
-            System.out.println("  Child: " + child.url + " (ID " + child.id + ")");
+    private void printTree(TreeNode node, int depth) {
+        if (node == null) {
+            return;
+        }
+
+        String indent = "";
+
+        for (int i = 0; i < depth; i++) {
+            indent += "  ";
+        }
+
+        System.out.println(indent + "- " + node.url + " (ID " + node.id + ")");
+
+        for (TreeNode child : node.children) {
+            printTree(child, depth + 1);
         }
     }
 }
