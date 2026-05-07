@@ -17,7 +17,7 @@ public class TreeIterator implements Iterator<TreeNode> {
 
     public TreeNode next() {
         if (!hasNext()) {
-            throw new IllegalStateException("No more elements");
+            throw new java.util.NoSuchElementException("No more elements");
         }
         TreeNode current = queue.remove();
         for (TreeNode child : current.children) {

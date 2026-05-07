@@ -1,9 +1,9 @@
 import java.io.IOException;
 import java.util.ArrayList;
-import org.jsoup.nodes.Document;
-
 import java.util.HashMap;
 import java.util.List;
+
+import org.jsoup.nodes.Document;
 
 public class level5test {
     static String startUrl = "https://www.hunter.cuny.edu";
@@ -17,21 +17,21 @@ public class level5test {
     static int maxDepth = 5;
     static int pagesFetched = 0;
     static int maxPagesToFetch = 40;
+
     public static void main(String[] args) {
         Tree tree = new Tree("/", 0);
         naryTree.put("/", 0);
 
-        buildBFS(tree.getRoot(), 0);
-        // System.out.println("Level 5 Test: Output Dot Code");
-        // System.out.println();
+        buildDFS(tree.getRoot(), 0);
 
-        tree.printTree();
+        tree.printDot();
     }
 
-    public static void buildBFS(TreeNode parent, int depth) {
+    public static void buildDFS(TreeNode parent, int depth) {
         if (depth >= maxDepth || pagesFetched >= maxPagesToFetch) {
             return;
         }
+
         String nextURL = startUrl + parent.url;
 
         try {
@@ -41,22 +41,26 @@ public class level5test {
             List<String> absoluteLinks = extractor.extractLinks(document);
             List<String> relativeHunterLinks = filter.filterToRelativeHunterLinks(absoluteLinks);
 
-            List<TreeNode> nextChild= new ArrayList<>();
+            List<TreeNode> nextChildren = new ArrayList<>();
 
             for (String link : relativeHunterLinks) {
                 if (!naryTree.containsKey(link)) {
                     naryTree.put(link, id);
+
                     TreeNode child = new TreeNode(link, id, depth + 1);
                     parent.addChild(child);
-                    nextChild.add(child);
+                    nextChildren.add(child);
+
                     id++;
                 }
             }
-            for (TreeNode child : nextChild) {
-                buildBFS(child, depth + 1);
+
+            for (TreeNode child : nextChildren) {
+                buildDFS(child, depth + 1);
             }
+
         } catch (IOException e) {
-            System.err.println("Could not fetch page: " + parent.url);
+            System.err.println("Could not fetch page: " + nextURL);
             System.err.println(e.getMessage());
         }
     }

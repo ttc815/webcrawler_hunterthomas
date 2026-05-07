@@ -46,4 +46,9 @@ public class Tree {
             printTree(child, depth + 1);
         }
     }
+
+    public void printTreeSummary() {
+        System.out.println("Root: " + root.url + " (ID " + root.id + ")");
+        System.out.println("Number of children: " + root.children.size());
+    }
 }

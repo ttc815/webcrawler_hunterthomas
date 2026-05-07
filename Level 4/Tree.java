@@ -25,13 +25,24 @@ public class Tree {
         return root;
     }
 
-    public void printTree() {
-        System.out.println("Root: " + root.url);
-
-        for (TreeNode child : root.children) {
-            System.out.println("  Child: " + child.url + " (ID " + child.id + ")");
-            
+    private void printTree(TreeNode node, int depth) {
+        if (node == null) {
+            return;
         }
+        String indent = "";
+
+        for (int i = 0; i < depth; i++) {
+            indent += "  ";
+        }
+        System.out.println(indent + "- " + node.url + " (ID " + node.id + ")");
+        for (TreeNode child : node.children) {
+            printTree(child, depth + 1);
+        }
+    }
+
+    public void printTreeSummary() {
+        System.out.println("Root: " + root.url + " (ID " + root.id + ")");
+        System.out.println("Number of children: " + root.children.size());
     }
 
     public TreeIterator iterator() {
@@ -39,16 +50,31 @@ public class Tree {
     }
 
     public void printTreeLevelOrder() {
+        if (root == null) {
+            System.out.println("Tree is empty.");
+            return;
+        }
+
         TreeIterator iterator = iterator();
-        int currentdepth = -1;
+        int currentDepth = -1;
+
+        System.out.println("Tree Level Order Traversal:");
+        System.out.println();
 
         while (iterator.hasNext()) {
             TreeNode node = iterator.next();
-            if (node.depth != currentdepth) {
-                currentdepth = node.depth;
-                System.out.println("Current Layer: " + node.depth);
+
+            if (node.depth != currentDepth) {
+                currentDepth = node.depth;
+
+                if (currentDepth > 0) {
+                    System.out.println();
+                }
+
+                System.out.println("Layer " + currentDepth + ":");
             }
-            System.out.println("Id: " + node.id + " Url: " + node.url);
+
+            System.out.println("  ID " + node.id + " | " + node.url);
         }
     }
 }

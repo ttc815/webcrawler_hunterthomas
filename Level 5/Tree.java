@@ -25,21 +25,24 @@ public class Tree {
         return root;
     }
 
-    public void printTree() {
-        System.out.println("digraph Hunter_Web_Crawler {");
-        System.out.println("    node [shape=box, style=filled];");
-
-        TreeIterator iterator = iterator();
-        while (iterator.hasNext()) {
-            TreeNode node = iterator.next();
-                System.out.println("    " + "node" + node.id + " [label=\"" + node.url + "\"];\n");
-                for (TreeNode child : node.children) {
-                String childName = "node" + child.id;
-                System.out.println("    " + "node" + node.id + " -> " + childName + ";");
-            }
+    private void printTree(TreeNode node, int depth) {
+        if (node == null) {
+            return;
         }
+        String indent = "";
 
-        System.out.println("}");
+        for (int i = 0; i < depth; i++) {
+            indent += "  ";
+        }
+        System.out.println(indent + "- " + node.url + " (ID " + node.id + ")");
+        for (TreeNode child : node.children) {
+            printTree(child, depth + 1);
+        }
+    }
+
+    public void printTreeSummary() {
+        System.out.println("Root: " + root.url + " (ID " + root.id + ")");
+        System.out.println("Number of children: " + root.children.size());
     }
 
     public TreeIterator iterator() {
@@ -60,4 +63,28 @@ public class Tree {
             System.out.println("Id: " + node.id + " Url: " + node.url);
         }
     }
+
+    public void printDot() {
+        System.out.println("digraph HunterTree {");
+        System.out.println("  node [shape=box];");
+
+        TreeIterator iterator = iterator();
+
+        while (iterator.hasNext()) {
+            TreeNode node = iterator.next();
+
+            System.out.println("  node" + node.id + " [label=\"" + escapeDot(node.url) + "\"];");
+
+            for (TreeNode child : node.children) {
+                System.out.println("  node" + node.id + " -> node" + child.id + ";");
+            }
+        }
+
+        System.out.println("}");
+    }
+
+    private String escapeDot(String text) {
+        return text.replace("\\", "\\\\").replace("\"", "\\\"");
+    }
+
 }

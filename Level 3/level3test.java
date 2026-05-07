@@ -48,6 +48,7 @@ public class level3test {
             System.out.println();
             System.out.println("Tree contents:");
             tree.printTree();
+            tree.printTreeSummary();
 
         } catch (Exception e) {
             System.err.println("Could not fetch page: " + startUrl);
