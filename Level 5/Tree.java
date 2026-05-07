@@ -25,6 +25,10 @@ public class Tree {
         return root;
     }
 
+    public void printTree() {
+        printTree(root, 0);
+    }
+
     private void printTree(TreeNode node, int depth) {
         if (node == null) {
             return;
