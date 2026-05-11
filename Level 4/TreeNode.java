@@ -10,7 +10,7 @@ public class TreeNode {
     int depth;
     
     // Initialize the node
-    public TreeNode(String url, int id) {
+    public TreeNode(String url, int id, int depth) {
         this.url = url;
         this.id = id;
         this.depth = depth;

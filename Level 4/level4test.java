@@ -14,9 +14,9 @@ public class level4test {
     static HashMap<String, Integer> naryTree = new HashMap<>();
     static int id = 1;
 
-    static int maxDepth = 3;
+    static int maxDepth = 10;
     static int pagesFetched = 0;
-    static int maxPagesToFetch = 40;
+    static int maxPagesToFetch = 100;
 
     public static void main(String[] args) {
         Tree tree = new Tree("/", 0);
