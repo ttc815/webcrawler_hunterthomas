@@ -31,3 +31,5 @@ cd "Level 5"
 javac -cp ".;../lib/jsoup-1.22.2.jar" *.java
 jar cfe level5.jar level5test *.class
 java -cp "level5.jar;../lib/jsoup-1.22.2.jar" level5test
+
+Hedley, J. (n.d.). ListLinks.java. GitHub. Retrieved April 24, 2026, from https://github.com/jhy/jsoup/blob/master/src/main/java/org/jsoup/examples/ListLinks.java

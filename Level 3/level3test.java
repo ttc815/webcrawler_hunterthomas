@@ -31,6 +31,8 @@ public class level3test {
                     naryTree.put(link, id);
                     tree.addChild(new TreeNode(link, id));
                     id++;
+                } else {
+                    duplicates++;
                 }
             }
             System.out.println("Level 3 Test Using HashMap");
@@ -42,6 +44,11 @@ public class level3test {
             }
             System.out.println("Total unique links: " + naryTree.size());
             System.out.println("Total duplicates: " + duplicates);
+
+            System.out.println();
+            System.out.println("Tree contents:");
+            tree.printTree();
+            tree.printTreeSummary();
 
         } catch (Exception e) {
             System.err.println("Could not fetch page: " + startUrl);
