@@ -32,10 +32,8 @@ WEBCRAWLER_HUNTERTHOMAS/
 │   └── jsoup-1.22.2.jar
 │
 ├── Resources/
-│
-├── Screenshots/
-│
-├── Project Log/
+│   └── Screenshots/
+│   └── Project Log
 │
 └── README.md
 ```
