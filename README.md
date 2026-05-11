@@ -6,18 +6,39 @@ The link extraction logic is adapted from the jsoup ListLinks example:
 https://jsoup.org/cookbook/extracting-data/example-list-links
 
 # Project Structure
+```text
 WEBCRAWLER_HUNTERTHOMAS/
-├── Level 1/ Fetches www.hunter.cuny.edu from the Internet and URLs extracted from main page.
-├── Level 2/ Uses the URLs fetched from Level 1, changes to relative links and filters out deeper subdomains.
-├── Level 3/ Creates hashmap to build n-ary tree with the relative url as the "key". Filters out duplicates. All urls link to the mainpage in this tree currently.
-├── Level 4/ Builds TreeIterator to traverse the tree in level-order during the runtime that is at least a height of 3.
-├── Level 5/ Adds Dot Formatting to the TreeIterator to produce image of graph.
+│
+├── Level 1/
+│   └── Fetches www.hunter.cuny.edu and extracts URLs
+│
+├── Level 2/
+│   └── Filters URLs, converts to relative links,
+│       removes deeper subdomains and duplicates
+│
+├── Level 3/
+│   └── Builds an n-ary tree using a HashMap
+│       with relative URLs as keys
+│
+├── Level 4/
+│   └── Builds a TreeIterator and performs
+│       level-order traversal on the runtime tree
+│
+├── Level 5/
+│   └── Generates Graphviz DOT output to
+│       visualize the crawler tree
+│
 ├── lib/
 │   └── jsoup-1.22.2.jar
+│
 ├── Resources/
-│   └── Screenshots/
-│   └── Project Log/
+│
+├── Screenshots/
+│
+├── Project Log/
+│
 └── README.md
+```
 ## Build
 mvn clean package
 
