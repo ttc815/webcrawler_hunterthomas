@@ -37,19 +37,21 @@ WEBCRAWLER_HUNTERTHOMAS/
 │
 └── README.md
 ```
-## Build
-mvn clean package
+## Build Level
+cd "{Target Level Folder}"  
+javac -cp ".;../lib/jsoup-1.22.2.jar" *.java  
+jar cfe level5.jar {Naming of Test File} *.class  
+Example:
+``` Example
+cd "Level 5"
+javac -cp ".;../lib/jsoup-1.22.2.jar" *.java
+jar cfe level5.jar level5test *.class
+java -cp "level5.jar;../lib/jsoup-1.22.2.jar" level5test
+```
 
 ## Run
-java -jar target/hunter-crawler-jar-with-dependencies.jar
 
-Or with a custom URL:
-java -jar target/hunter-crawler-jar-with-dependencies.jar https://www.hunter.cuny.edu/
-
-cd "Level 5"  
-javac -cp ".;../lib/jsoup-1.22.2.jar" *.java  
-jar cfe level5.jar level5test *.class  
-java -cp "level5.jar;../lib/jsoup-1.22.2.jar" level5test  
+java -cp "level5.jar;../lib/jsoup-1.22.2.jar" {Target Test File}  
 
 ## References
 Hedley, J. (n.d.). ListLinks.java. GitHub. Retrieved April 24, 2026, from https://github.com/jhy/jsoup/blob/master/src/main/java/org/jsoup/examples/ListLinks.java
