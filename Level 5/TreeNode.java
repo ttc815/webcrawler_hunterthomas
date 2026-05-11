@@ -6,7 +6,6 @@ public class TreeNode {
     String url;
     int id;
     List<TreeNode> children;
-    // Level 4: Confirm Height of 3;
     int depth;
     
     // Initialize the node

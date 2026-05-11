@@ -12,7 +12,10 @@ public class UrlFilter {
 
         for (String link : absoluteLinks) {
             if (isAcceptedHunterUrl(link)) {
-                filteredLinks.add(toRelativeUrl(link));
+                String relative = toRelativeUrl(link);
+                if (!relative.isEmpty()) {
+                    filteredLinks.add(relative);
+                }
             }
         }
 
@@ -47,19 +50,21 @@ public class UrlFilter {
             URI uri = new URI(url);
 
             String path = uri.getRawPath();
-            String query = uri.getRawQuery();
+            // String query = uri.getRawQuery();
             //Commented out for now to lessen amount of pages being crawled
             // String fragment = uri.getRawFragment();
 
             if (path == null || path.isEmpty()) {
                 path = "/";
             }
-
-            String relativeUrl = path;
-
-            if (query != null && !query.isEmpty()) {
-                relativeUrl += "?" + query;
+            
+            if (path.substring(1).contains("http")) {
+                return "";
             }
+            if (path.endsWith("/") && path.length() > 1) {
+                path = path.substring(0, path.length() - 1);
+            }
+            String relativeUrl = path;
 
             // if (fragment != null && !fragment.isEmpty()) {
             //     relativeUrl += "#" + fragment;
