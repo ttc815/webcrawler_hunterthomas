@@ -71,5 +71,57 @@ public class Tree {
         }
         System.out.println("}");
     }
+
+    public String toDotString() {
+        StringBuilder dot = new StringBuilder();
+
+        dot.append("digraph HunterTree {\n");
+        dot.append("    rankdir=TB;\n");
+        dot.append("    ratio=compress;\n");
+        dot.append("    nodesep=0.2;\n");
+        dot.append("    ranksep=0.35;\n");
+
+        dot.append("    node [\n");
+        dot.append("        shape=box,\n");
+        dot.append("        style=\"rounded,filled\",\n");
+        dot.append("        fillcolor=lightblue,\n");
+        dot.append("        fontsize=8,\n");
+        dot.append("        width=1.2,\n");
+        dot.append("        height=0.3,\n");
+        dot.append("        margin=0.04\n");
+        dot.append("    ];\n");
+
+        dot.append("    edge [\n");
+        dot.append("        arrowsize=0.4\n");
+        dot.append("    ];\n");
+
+        TreeIterator iterator = iterator();
+
+        while (iterator.hasNext()) {
+            TreeNode node = iterator.next();
+
+            dot.append("    node")
+            .append(node.id)
+            .append(" [label=\"")
+            .append(escapeDot(node.url))
+            .append("\"];\n");
+
+            for (TreeNode child : node.children) {
+                dot.append("    node")
+                .append(node.id)
+                .append(" -> node")
+                .append(child.id)
+                .append(";\n");
+            }
+        }
+
+        dot.append("}\n");
+
+        return dot.toString();
+    }
+
+    private String escapeDot(String text) {
+        return text.replace("\\", "\\\\").replace("\"", "\\\"");
+    }
 }
 
