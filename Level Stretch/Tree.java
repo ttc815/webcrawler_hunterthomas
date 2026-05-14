@@ -46,23 +46,20 @@ public class Tree {
         StringBuilder dot = new StringBuilder();
 
         dot.append("digraph HunterTree {\n");
-        dot.append("    rankdir=TB;\n");
-        dot.append("    ratio=compress;\n");
-        dot.append("    nodesep=0.2;\n");
-        dot.append("    ranksep=0.35;\n");
+        dot.append("    rankdir=LR;\n");
+        dot.append("    nodesep=0.25;\n");
+        dot.append("    ranksep=0.75;\n");
 
         dot.append("    node [\n");
         dot.append("        shape=box,\n");
         dot.append("        style=\"rounded,filled\",\n");
         dot.append("        fillcolor=lightblue,\n");
-        dot.append("        fontsize=8,\n");
-        dot.append("        width=1.2,\n");
-        dot.append("        height=0.3,\n");
-        dot.append("        margin=0.04\n");
+        dot.append("        fontsize=10,\n");
+        dot.append("        margin=0.06\n");
         dot.append("    ];\n");
 
         dot.append("    edge [\n");
-        dot.append("        arrowsize=0.4\n");
+        dot.append("        arrowsize=0.5\n");
         dot.append("    ];\n");
 
         TreeIterator iterator = iterator();
@@ -73,8 +70,10 @@ public class Tree {
             dot.append("    node")
             .append(node.id)
             .append(" [label=\"")
-            .append(escapeDot(node.url))
-            .append("\"];\n");
+            .append(escapeDot(shortenLabel(node.url)))
+            .append("\", ")
+            .append(getDepthStyle(node.depth))
+            .append("];\n");
 
             for (TreeNode child : node.children) {
                 dot.append("    node")
@@ -88,6 +87,28 @@ public class Tree {
         dot.append("}\n");
 
         return dot.toString();
+    }
+
+    private String getDepthStyle(int depth) {
+        if (depth == 0) {
+            return "fillcolor=\"#1f4e79\", fontcolor=\"white\", fontsize=18, penwidth=3";
+        } else if (depth == 1) {
+            return "fillcolor=\"#5b9bd5\", fontcolor=\"white\", fontsize=14, penwidth=2.5";
+        } else if (depth == 2) {
+            return "fillcolor=\"#9dc3e6\", fontcolor=\"black\", fontsize=12, penwidth=2";
+        } else if (depth == 3) {
+            return "fillcolor=\"#bdd7ee\", fontcolor=\"black\", fontsize=10, penwidth=1.5";
+        } else {
+            return "fillcolor=\"#ddebf7\", fontcolor=\"black\", fontsize=9, penwidth=1";
+        }
+    }
+
+    private String shortenLabel(String text) {
+        if (text.length() > 45) {
+            return text.substring(0, 42) + "...";
+        }
+
+        return text;
     }
 
     private String escapeDot(String text) {

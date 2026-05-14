@@ -20,11 +20,14 @@ public class levelstretchtest {
     static int maxPagesToFetch = 40;
 
     public static void main(String[] args) {
+        System.setProperty("java.awt.headless", "false");
         System.out.println("Level Stretch Test");
+        System.out.println("By Hunter & Thomas");
         System.out.println("==================");
         System.out.println();
 
         System.out.println("Building Hunter web crawler tree...");
+
         Tree tree = new Tree("/", 0);
         naryTree.put("/", 0);
 
